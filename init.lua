@@ -1,5 +1,5 @@
 return {
-  colorscheme = "xcodedark",
+  colorscheme = "xcodehc",
 
   plugins = {
     {
