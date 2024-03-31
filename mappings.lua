@@ -47,6 +47,7 @@ end
 -- Telescope --
 if is_available "telescope.nvim" then
   maps.n["<C-x>?"] = { function() require("telescope.builtin").help_tags() end, desc = "Find help" }
+  -- maps.n["<leader>?"]
 end
 
 return maps
