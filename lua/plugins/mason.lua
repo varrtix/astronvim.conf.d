@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Mason plugins
 
@@ -40,4 +40,16 @@ return {
       })
     end,
   },
+  -- {
+  --   "williamboman/mason.nvim",
+  --   opts = {
+  --     github = {
+  --       download_url_template = string.gsub(
+  --         require("mason.settings").current.github.download_url_template,
+  --         "https://github.com/",
+  --         "https://hub.yzuu.cf/"
+  --       ),
+  --     },
+  --   },
+  -- },
 }

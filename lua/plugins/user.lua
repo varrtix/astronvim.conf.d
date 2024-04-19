@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
@@ -81,5 +81,80 @@ return {
         Rule("a", "a", "-vim")
       )
     end,
+  },
+  -- Customize location
+  --
+  -- "andweeb/presence.nvim",
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("lsp_signature").setup()
+  --   end,
+  -- },
+  --
+  -- {
+  --   "sonph/onehalf",
+  --   lazy = false,
+  --   name = "sonph",
+  --   rtp = "vim/",
+  --   config = function()
+  --     vim.api.nvim_set_option("background", "light")
+  --     vim.cmd("colorscheme onehalflight")
+  --   end,
+  -- },
+  --
+  -- colorscheme
+  {
+    "sainnhe/everforest",
+    config = function()
+      vim.api.nvim_set_option("background", "light")
+      vim.api.nvim_set_var("everforest_background", "hard")
+    end,
+  },
+  {
+    "EdenEast/nightfox.nvim",
+    lazy = false,
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    lazy = false,
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+  },
+  {
+    "sainnhe/sonokai",
+    lazy = false,
+    config = function() vim.api.nvim_set_var("sonokai_style", "andromeda") end,
+  },
+  {
+    "lunacookies/vim-colors-xcode",
+    lazy = false,
+    -- priority = 1000,
+    -- config = function()
+    -- vim.cmd
+    -- end
+  },
+  {
+    "CodeGradox/onehalf-lush",
+    lazy = false,
+    -- priority = 1000,
+    -- config = function()
+    -- vim.api.nvim_set_option("background", "light")
+    -- vim.cmd "colorscheme onehalf-lush"
+    -- end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    event = "User AstroFile",
+    cmd = { "TodoQuickFix" },
+    keys = {
+      { "<leader>fT", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" },
+    },
   },
 }
